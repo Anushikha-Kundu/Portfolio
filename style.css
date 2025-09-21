@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.webp);
+    background-image: url("images/background.webp");
     background-size: cover;
     background-position: center;
 }
@@ -225,11 +225,26 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 6px;
 }
-form .btn2{
+.btn.btn2:hover{
+    background: #036d83;
+    transform: translateY(-5px);
+}
+form button[type="submit"] {
+    display: inline-block;
+    background: #60cccc;
+    color: #fff;
+    font-size: 18px;
     padding: 14px 60px;
-    font-size: 16px;
-    margin-top: 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
     cursor: pointer;
+    transition: background 0.5s, transform 0.5s;
+}
+form button[type="submit"]:hover {
+    background: #036d83;
+    transform: translateY(-5px);
 }
 .copyright{
     width: 100%;
@@ -241,28 +256,23 @@ form .btn2{
 }
 #msg{
     color: #61b752;
-    margin-left: 20px;
-    margin-top: -10px;
     display: block;
+    text-align: left;
+    margin-top: 10px;
 }
-
 /* ==========================================================================
    CSS FOR SMALL SCREENS - ALL MOBILE FIXES ARE HERE
    ========================================================================== */
-
 nav .fa-solid{
     display: none;
 }
-
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/background.webp);
+        background-image: url("images/background.webp");
     }
-    
     .logo {
         width: 160px;
     }
-
     .header-text{
         margin-top: 60%;
         font-size: 16px;
@@ -321,9 +331,7 @@ nav .fa-solid{
     .contact-right form{
         width: 100%;
     }
-    /* This rule specifically targets the form inputs on mobile */
     form input, form textarea {
         width: 100%;
     }
 }
-
