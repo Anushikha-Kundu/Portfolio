@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e14733b1ec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/WhatsApp Image 2025-09-16 at 7.07.33 PM.jpeg" class="logo">
+            <ul id="sidemenu">
+               <li><a href="#header">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#contact">Contact</a></li>
+               <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi,I'm <span>Anushikha Kundu</span><br></h1>
+            <p>A Programmer</p>
+        </div>
+    </div>
+</div>
+<!--------------------------------about------------------------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+               <img src="images/about.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a dedicated and hardworking college student currently 
+                    pursuing my Bachelor's degree in Artificial Intelligence and 
+                    Machine Learning. Beyond my academic pursuits, I am a passionate 
+                    programmer with a love for web development, skillfully using HTML,
+                    CSS, and JavaScript to create dynamic and user-friendly websites. 
+                    Known for my cheerful and positive attitude, I approach every project
+                    and challenge with enthusiasm and a commitment to delivering my best work.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active link"onclick="opentab(event,'education')">Education</p>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-current</span><br>Currently doing B.TECH in AIML from Narula Institute Of Technology</li>
+                            <li><span>2024</span><br>12th board's from Kairali School</li>
+                            <li><span>2022</span><br>10th board's from Kairali School</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------------------skills------------------------->
+<div id="skills">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-list">
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>Web Development</h2>
+                <p>I'm proficient in building responsive and user-friendly 
+                   websites from the ground up using HTML, CSS, and JavaScript
+                   . I focus on creating clean, efficient code to develop dynamic
+                    and interactive web experiences that look great on any device.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Database Management</h2>
+                <p>I have strong experience in designing and managing relational 
+                   databases with MySQL. I am skilled at writing complex SQL queries
+                   to retrieve and manipulate data, ensuring data integrity and 
+                   optimizing database performance for applications.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <h2>Problem Solving</h2>
+                <p>I excel at breaking down complex challenges into manageable 
+                   parts to find logical and effective solutions. My analytical
+                   approach allows me to identify the root cause of an issue and
+                   implement a strategic plan to resolve it efficiently.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-hand-back-fist"></i>
+                <h2>Leadership</h2>
+                <p>I have a knack for guiding teams toward a common goal by 
+                   fostering a collaborative and motivating environment. I 
+                   believe in leading by example, communicating clearly, and 
+                   empowering team members to contribute their best work.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-palette"></i>
+                <h2>Sketching</h2>
+                <p>As a hobby, I enjoy sketching to quickly visualize and 
+                   communicate ideas, bringing concepts to life on paper. 
+                   It serves as both a stress reducer and calms my mind.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------contact-------------------------------------->
+<div id="contact">
+    <div id="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> anushikhakundu@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i> 3824939782</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ak._artist?igsh=OHo1MnduaHV1ZW9v"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/anushikha-kundu-841781324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                    <a href="hhtps;//www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a></a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright <i class="fa-solid fa-copyright"></i> Anushikha Kundu.</p>
+</div>
+<script>
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(event, tabname){
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyDhPqgLLgx7COH5RgwXAjOgd3wSPfvk6aVUoRNRlU41I6_jWdyaMOLPvz4LBPJVOh2/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    msg.innerHTML = "Sending...."
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },3000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+    
+</body>
+</html>
