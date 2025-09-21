@@ -178,11 +178,11 @@ nav ul li a:hover::after{
 }
 /*-------------------contact----------------*/
 .contact-left{
-    padding: 150px;
+    padding-top: 150px;
     flex-basis: 35%;
 }
 .contact-right{
-    padding: 150px;
+    padding-top: 150px;
     flex-basis: 60%;
 }
 .contact-left p{
@@ -214,25 +214,8 @@ nav ul li a:hover::after{
 .contact-right form{
     width: 100%;
 }
-.btn.btn2{
-    display: inline-block;
-    background: #60cccc;
-    color: #fff;
-    padding: 14px 40px;
-    font-size: 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.5s ;
-}
-.btn.btn2:hover{
-    background: #036d83;
-    transform: translateY(-5px);
-}
 form input, form textarea{
-    width: calc(100% - 150px);
+    width: 100%;
     border: 0;
     outline: none;
     background: #262626;
@@ -256,14 +239,30 @@ form .btn2{
     font-weight: 300;
     margin-top: 20px;
 }
-/*----------------------------------css for small screens---------------------------*/
+#msg{
+    color: #61b752;
+    margin-left: 20px;
+    margin-top: -10px;
+    display: block;
+}
+
+/* ==========================================================================
+   CSS FOR SMALL SCREENS - ALL MOBILE FIXES ARE HERE
+   ========================================================================== */
+
 nav .fa-solid{
     display: none;
 }
+
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/back3.webp);
     }
+    
+    .logo {
+        width: 160px;
+    }
+
     .header-text{
         margin-top: 60%;
         font-size: 16px;
@@ -272,14 +271,11 @@ nav .fa-solid{
         font-size: 30px;
     }
     .header-text p{
-    font-size: 20px;
-    }
-    .logo{
-        width: 160px;
+        font-size: 20px;
     }
     nav .fa-solid{
-    display: block;
-    font-size: 25px;
+        display: block;
+        font-size: 25px;
     }
     nav ul{
         background: #262626;
@@ -322,13 +318,11 @@ nav .fa-solid{
         flex-basis: 100%;
         padding-top: 30px;
     }
-    .contact-right form input, .contact-right form textarea{
+    .contact-right form{
         width: 100%;
     }
-}
-#msg{
-    color: #61b752;
-    margin-left: 20px;
-    margin-top: -10px;
-    display: block;
+    /* This rule specifically targets the form inputs on mobile */
+    form input, form textarea {
+        width: 100%;
+    }
 }
