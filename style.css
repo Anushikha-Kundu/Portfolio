@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/back3.webp);
+    background-image: url(images/background.webp);
     background-size: cover;
     background-position: center;
 }
@@ -256,7 +256,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/back3.webp);
+        background-image: url(images/background.webp);
     }
     
     .logo {
@@ -326,3 +326,4 @@ nav .fa-solid{
         width: 100%;
     }
 }
+
